@@ -76,12 +76,12 @@ function Home() {
               View Learning Log <i className="fas fa-arrow-right"></i>
             </Link>
           </div>
+          <footer>
+            <h3>https://github.com/Hellv99</h3>
+            Built by Feyi- learning in public
+          </footer>
         </div>
       </div>
-      <footer>
-        <h3>https://github.com/Hellv99</h3>
-        Built by Feyi- learning in public
-      </footer>
     </div>
   );
 }
