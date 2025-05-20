@@ -1,5 +1,5 @@
 import React from "react";
-import LearningLogForm from "../components/LearningLogform";
+import LearningLogForm from "../components/LearningLogForm";
 import Navbar from "../components/Navbar";
 
 function LearningLog() {
