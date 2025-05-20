@@ -10,7 +10,8 @@ import {
 } from "recharts";
 
 const LearningLogChart = () => {
-  const logs = JSON.parse(localStorage.getItem("logs")) || [];
+  // Use the correct localStorage key "learningLogEntries" instead of "logs"
+  const logs = JSON.parse(localStorage.getItem("learningLogEntries")) || [];
   const countsByDate = {};
 
   logs.forEach((log) => {
