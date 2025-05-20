@@ -30,24 +30,34 @@ const LearningLogForm = () => {
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   };
 
+  // When saving entries:
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (newEntry.note.trim()) {
-      const entry = {
-        id: Date.now(),
-        ...newEntry,
-        timestamp: new Date().toISOString(),
-      };
+    if (!newEntry.note.trim()) return;
 
-      const updatedEntries = [entry, ...entries];
-      setEntries(updatedEntries);
-      setNewEntry({
-        note: "",
-        goal: "",
-        date: new Date().toISOString().split("T")[0],
-      });
-    }
+    const entry = {
+      id: Date.now(),
+      note: newEntry.note,
+      goal: newEntry.goal,
+      date: newEntry.date,
+      timestamp: new Date().toISOString(),
+    };
+
+    const updatedEntries = [...entries, entry];
+    setEntries(updatedEntries);
+    localStorage.setItem("learningLogEntries", JSON.stringify(updatedEntries));
+
+    // Reset form
+    setNewEntry({ note: "", goal: "", date: "" });
   };
+
+  // When loading entries (in useEffect):
+  useEffect(() => {
+    const savedEntries = localStorage.getItem("learningLogEntries");
+    if (savedEntries) {
+      setEntries(JSON.parse(savedEntries));
+    }
+  }, []);
 
   return (
     <div className="learning-log-container">

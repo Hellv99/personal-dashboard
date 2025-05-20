@@ -1,8 +1,8 @@
 import React from "react";
 import "/src/pages/Dashboard.css";
 import ProgressStats from "../components/ProgressStats";
-import LearningLogChart from "../components/LearningLogChart";
 import Navbar from "../components/Navbar";
+import LearningLogStats from "../components/LearningLogStats";
 
 const Dashboard = () => {
   return (
@@ -13,7 +13,7 @@ const Dashboard = () => {
         <h2>Your Progress Dashboard</h2> <br />
         <p>Track how you're doing with your goals, tasks and learning.</p>
         <ProgressStats />
-        <LearningLogChart />
+        <LearningLogStats />
       </div>
     </>
   );

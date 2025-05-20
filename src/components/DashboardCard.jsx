@@ -1,14 +1,17 @@
 import React from "react";
-import "/src/pages/Dashboard.css";
+import "./DashboardCard.css";
 
-const DashboardCard = ({ label, value }) => {
+const DashboardCard = ({ label, value, icon, color }) => {
   return (
-    <>
-      <div className="dashboard-card">
-        <h3 className="label-label">{label}</h3>
-        <p className="value">{value}</p>
+    <div className={`dashboard-card ${color}`}>
+      <div className="card-icon">
+        <i className={icon}></i>
       </div>
-    </>
+      <div className="card-content">
+        <h3 className="card-value">{value}</h3>
+        <p className="card-label">{label}</p>
+      </div>
+    </div>
   );
 };
 

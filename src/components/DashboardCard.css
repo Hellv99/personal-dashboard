@@ -1,0 +1,99 @@
+.dashboard-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+}
+
+.dashboard-card.primary::before {
+  background: var(--primary);
+}
+
+.dashboard-card.success::before {
+  background: var(--success);
+}
+
+.dashboard-card.warning::before {
+  background: var(--warning);
+}
+
+.dashboard-card.danger::before {
+  background: var(--danger);
+}
+
+.dashboard-card.accent::before {
+  background: var(--accent);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.primary .card-icon {
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--primary);
+}
+
+.success .card-icon {
+  background: rgba(76, 201, 240, 0.1);
+  color: var(--success);
+}
+
+.warning .card-icon {
+  background: rgba(248, 150, 30, 0.1);
+  color: var(--warning);
+}
+
+.danger .card-icon {
+  background: rgba(249, 65, 68, 0.1);
+  color: var(--danger);
+}
+
+.accent .card-icon {
+  background: rgba(247, 37, 133, 0.1);
+  color: var(--accent);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card-label {
+  color: var(--gray);
+  margin: 5px 0 0;
+  font-size: 14px;
+}
