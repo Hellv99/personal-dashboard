@@ -78,6 +78,10 @@ function Home() {
           </div>
         </div>
       </div>
+      <footer>
+        <h3>https://github.com/Hellv99</h3>
+        Built by Feyi- learning in public
+      </footer>
     </div>
   );
 }
